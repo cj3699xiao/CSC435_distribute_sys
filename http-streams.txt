@@ -1,0 +1,120 @@
+Yuchen Xiao's Port listener running at 2540.
+
+GET /thisisyuchenxiao HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+
+GET /dog.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+Wireshark
+
+Frame 122: 731 bytes on wire (5848 bits), 731 bytes captured (5848 bits) on interface 0
+Ethernet II, Src: IntelCor_49:8b:62 (94:b8:6d:49:8b:62), Dst: JuniperN_28:17:f0 (3c:94:d5:28:17:f0)
+Internet Protocol Version 4, Src: 75.102.235.151, Dst: 216.220.180.148
+Transmission Control Protocol, Src Port: 14808, Dst Port: 80, Seq: 1, Ack: 1, Len: 677
+    Source Port: 14808
+    Destination Port: 80
+    [Stream index: 13]
+    [TCP Segment Len: 677]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 678    (relative sequence number)]
+    Acknowledgment number: 1    (relative ack number)
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+    Window size value: 259
+    [Calculated window size: 66304]
+    [Window size scaling factor: 256]
+    Checksum: 0xc72e [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [SEQ/ACK analysis]
+    [Timestamps]
+    TCP payload (677 bytes)
+Hypertext Transfer Protocol
+    GET /elliott/dog.txt HTTP/1.1\r\n
+        [Expert Info (Chat/Sequence): GET /elliott/dog.txt HTTP/1.1\r\n]
+            [GET /elliott/dog.txt HTTP/1.1\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Request Method: GET
+        Request URI: /elliott/dog.txt
+        Request Version: HTTP/1.1
+    Host: condor.depaul.edu\r\n
+    Connection: keep-alive\r\n
+    Cache-Control: max-age=0\r\n
+    Upgrade-Insecure-Requests: 1\r\n
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\r\n
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    Accept-Language: en-US,en;q=0.9\r\n
+    Cookie: _ga=GA1.2.708498517.1541283252; visid_incap_735528=MSvEu2QHT5qZqlJ5wvHArKhaW1wAAAAAQUIPAAAAAAAXpTbJvJxSueV8JbaoqnYf\r\n
+    If-None-Match: "8a1bfc-30-521899bff76c0"\r\n
+    If-Modified-Since: Wed, 07 Oct 2015 20:29:55 GMT\r\n
+    \r\n
+    [Full request URI: http://condor.depaul.edu/elliott/dog.txt]
+    [HTTP request 1/1]
+    [Response in frame: 125]
+
+
+Frame 107: 732 bytes on wire (5856 bits), 732 bytes captured (5856 bits) on interface 0
+Ethernet II, Src: IntelCor_49:8b:62 (94:b8:6d:49:8b:62), Dst: JuniperN_28:17:f0 (3c:94:d5:28:17:f0)
+Internet Protocol Version 4, Src: 75.102.235.151, Dst: 216.220.180.148
+Transmission Control Protocol, Src Port: 14809, Dst Port: 80, Seq: 1, Ack: 1, Len: 678
+    Source Port: 14809
+    Destination Port: 80
+    [Stream index: 14]
+    [TCP Segment Len: 678]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 679    (relative sequence number)]
+    Acknowledgment number: 1    (relative ack number)
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+    Window size value: 259
+    [Calculated window size: 66304]
+    [Window size scaling factor: 256]
+    Checksum: 0xc72f [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [SEQ/ACK analysis]
+    [Timestamps]
+    TCP payload (678 bytes)
+Hypertext Transfer Protocol
+    GET /elliott/cat.html HTTP/1.1\r\n
+        [Expert Info (Chat/Sequence): GET /elliott/cat.html HTTP/1.1\r\n]
+            [GET /elliott/cat.html HTTP/1.1\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Request Method: GET
+        Request URI: /elliott/cat.html
+        Request Version: HTTP/1.1
+    Host: condor.depaul.edu\r\n
+    Connection: keep-alive\r\n
+    Cache-Control: max-age=0\r\n
+    Upgrade-Insecure-Requests: 1\r\n
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\r\n
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    Accept-Language: en-US,en;q=0.9\r\n
+    Cookie: _ga=GA1.2.708498517.1541283252; visid_incap_735528=MSvEu2QHT5qZqlJ5wvHArKhaW1wAAAAAQUIPAAAAAAAXpTbJvJxSueV8JbaoqnYf\r\n
+    If-None-Match: "8a1bed-79-58158eb93f240"\r\n
+    If-Modified-Since: Fri, 08 Feb 2019 02:43:13 GMT\r\n
+    \r\n
+    [Full request URI: http://condor.depaul.edu/elliott/cat.html]
+    [HTTP request 1/1]
+    [Response in frame: 109]
+
